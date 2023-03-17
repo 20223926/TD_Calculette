@@ -1,0 +1,76 @@
+body {
+    font-family: Gotham Rounded, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #00AA;
+}
+
+.grid-main {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+
+    grid-template-areas:
+        "ecran ecran"
+        "symboles-haut symboles-haut"
+        "nombres symboles-droite";
+
+    grid-template-columns: 300px 100px;
+    grid-template-rows: 150px 100px 300px;
+}
+
+.grid-ecran {
+    display: grid;
+    grid-area: ecran;
+    grid-template-columns: 400px;
+    background-color: rgba(0, 0, 0, 0.747);
+    border: none;
+    cursor: default;
+    
+}
+
+.grid-ecran div {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+.grid-ecran > div:first-child {
+    color: rgb(202, 202, 202);
+    font-size: 1.5rem;
+}
+
+.grid-ecran > div:nth-child(2) {
+    color: white;
+    font-size: 3rem;
+}
+
+.grid-symboles-haut {
+    display: grid;
+    grid-area: symboles-haut;
+    grid-template-columns: repeat(2, 200px);
+}
+
+.grid-nombres {
+    display: grid;
+    grid-area: nombres;
+    grid-template-columns: repeat(3, 100px);
+}
+
+.grid-symboles-droite {
+    display: grid;
+    grid-area: symboles-droite;
+    grid-template-columns: 100px;
+}
+
+.grid-main button {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 2.5rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.425);
+}
